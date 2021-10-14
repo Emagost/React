@@ -13,4 +13,4 @@ call
         document.body.append(img)
     })
 
-.catch (console.warn)
+.catch (console.warn);
