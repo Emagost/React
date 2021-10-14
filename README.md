@@ -8,8 +8,8 @@ The topics I will see are
 
 #Functional Components
 
-
 #HOC - higher-order components
+
 #Context API
 
 #Redux
