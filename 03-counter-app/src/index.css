@@ -5,3 +5,10 @@ html, body {
     font-size:1.3rem;
     padding: 10rem;
 }
+
+button{
+    border-radius: 5px;
+    font-size:1.3rem;
+    margin-right: 1rem;
+    padding: 1rem;
+}
