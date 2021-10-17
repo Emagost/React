@@ -8,9 +8,9 @@ const FirstApp = ({
 
     return (
         <>
-            <h1>{hello}</h1>
+            <h1> { hello } </h1>
             {/* <pre>{JSON.stringify(hello,null,3)}</pre> */}
-            <p>{subtitle}</p>
+            <p> { subtitle } </p>
         </>
         );
 
@@ -20,8 +20,8 @@ FirstApp.propTypes = {
     hello: PropTypes.string
 }
 
-// FirstApp.defaultProps = {
-//     subtitle: 'Subtitle'
-// }
+FirstApp.defaultProps = {
+    subtitle: 'Hello Subtitle'
+}
 
 export default FirstApp;

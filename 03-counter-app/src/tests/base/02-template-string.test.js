@@ -12,7 +12,7 @@ describe('Test 02-template-string.js', () => {
 
         expect( greeting ).toBe('Hola ' + name + '!');
 
-        console.log(greeting);
+        //console.log(greeting);
     })
     
     //getSaludo debe retornar Hola Fiore! si no hay argumento name
