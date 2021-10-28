@@ -4,9 +4,13 @@ exports[`Test GifGridItme should show corretly the component 1`] = `
 <div
   className="card animate__animated animate__fadeIn"
 >
-  <img />
+  <img
+    alt="Title"
+    src="http://localhost/algo.jpg"
+  />
   <p>
      
+    Title
      
   </p>
 </div>
