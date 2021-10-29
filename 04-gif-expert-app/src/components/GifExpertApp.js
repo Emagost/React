@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { AddCategory } from './AddCategory';
-import { GifGrid } from './GifGrid';
+import GifGrid from './GifGrid';
 
-export const GifExpertApp = () => {
+const GifExpertApp = () => {
     
-    const [categories, setCategories] = useState(['The Office']);
+    const [categories, setCategories] = useState(['']);
 
     return (
         <>
@@ -27,3 +27,5 @@ export const GifExpertApp = () => {
         </>
     );
 };
+
+export default GifExpertApp;

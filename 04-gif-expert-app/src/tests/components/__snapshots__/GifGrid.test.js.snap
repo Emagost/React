@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test GifGrid should show items when useFetchGifs load 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    The Office
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="ABC"
+      key="ABC"
+      title="whatever"
+      url="https://google.com"
+    />
+    <GifGridItem
+      id="123"
+      key="123"
+      title="whatever"
+      url="https://google.com"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Test GifGrid snapshot 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__fadeIn"
+  >
+    The Office
+  </h3>
+  <h5
+    className="animate__animated animate__flash"
+  >
+    Loading...
+  </h5>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
