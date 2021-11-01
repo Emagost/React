@@ -1,12 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
 
 export const useFetch = ( url ) => {
 
-    const [state, setState] = useState({data:null, loading:true, error:null})
+    const isMounted = useRef(true);
+    const [state, setState] = useState({data:null, loading:true, error:null});
+
+    useEffect(() => {
+
+        return () => {
+            isMounted.current = false;
+        }
+
+    },[])
 
     useEffect ( ()=>{
 
-        setState({data:null, loading:true,error:null})
+        setState({data:null, loading:true,error:null});
 
         fetch( url )
             .then(resp => resp.json())
@@ -17,11 +26,14 @@ export const useFetch = ( url ) => {
                 quote: 'unknown id' 
             });
 
+            if (isMounted.current){
                 setState({
                     loading:false,
                     error:null,
                     data
-                })
+                });
+            }
+
             })
             .catch(error => setState({
                 loading: false,
@@ -29,7 +41,7 @@ export const useFetch = ( url ) => {
                 data: null
             }));
 
-    }, [url])
+    }, [url]);
 
     return state
 }
