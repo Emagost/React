@@ -8,8 +8,8 @@ export const NavBar = () => {
 
         <Link to="/" className="navbar-brand" >useContext</Link>
 
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
                 <NavLink exact activeClassName="active" to="/" className="nav-link">Home</NavLink>
                 <NavLink exact activeClassName="active" to="/about" className="nav-link">About</NavLink>
                 <NavLink exact activeClassName="active" to="/login" className="nav-link">Login</NavLink>
