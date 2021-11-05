@@ -11,5 +11,4 @@ describe('Test hookApp', () => {
         expect(wrapper).toMatchSnapshot();
 
     })
-    
-})
+});
