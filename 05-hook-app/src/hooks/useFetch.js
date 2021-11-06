@@ -33,13 +33,13 @@ export const useFetch = ( url ) => {
                     data
                 });
             }
-
             })
-            .catch(error => setState({
-                loading: false,
-                error,
-                data: null
-            }));
+            .catch (()=>{
+                setState({
+                    data:null,
+                    loading:false,
+                    error:'No se pudo cargar la info'});
+            })
 
     }, [url]);
 
