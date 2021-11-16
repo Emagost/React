@@ -4,7 +4,7 @@ import { MarvelScreen } from '../components/marvel/MarvelScreen';
 import { HeroScreen } from '../components/heroes/HeroScreen';
 import { DcScreen } from '../components/dc/DcScreen';
 import {Route} from "react-router-dom";
-import { Routes } from '../../node_modules/react-router-dom/index';
+import { Navigate, Routes } from '../../node_modules/react-router-dom/index';
 
 export const DashboardRoutes = () => {
     return (
@@ -14,11 +14,13 @@ export const DashboardRoutes = () => {
             <div className="container mt-2">
             <Routes>
                 <Route path="/marvel" element={<MarvelScreen />} />
-                <Route path="/marvel/:heroeid" element={<HeroScreen />} />
+                <Route path="marvel/hero/:heroeId" element={<HeroScreen />} />
+                <Route path="dc/hero/:heroeId" element={<HeroScreen />} />
                 <Route path="/dc" element={<DcScreen />} />
-                {/* default route */}
-                <Route path="*" element={<MarvelScreen />} />
+                <Route path="/*" element={ <Navigate replace to="/marvel" /> } />
+
             </Routes>
+                
 
             </div>
 
