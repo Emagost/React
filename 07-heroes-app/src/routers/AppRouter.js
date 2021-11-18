@@ -6,17 +6,30 @@ import {
 import { Routes } from "../../node_modules/react-router-dom/index";
 import { LoginScreen } from "../components/login/LoginScreen";
 import { DashboardRoutes } from "./DashboardRoutes";
+import { PrivateRoute } from "./PrivateRoute";
+import { PublicRoute } from "./PublicRoute";
 
 export const AppRouter = () => {
     return (
         <Router>
-            <div>
             <Routes>
-                <Route exact path="/login" element={<LoginScreen />} />
+                <Route path="/login" element={
+                    <PublicRoute>
+                        <LoginScreen />
+                    </PublicRoute>
+                    }
+                />
+                
+                
 
-                <Route path="/*" element={<DashboardRoutes />} />
+                <Route path="/*" element={
+                    <PrivateRoute>
+                        <DashboardRoutes />
+                    </PrivateRoute>
+                    } 
+                />
+
             </Routes>
-            </div>
         </Router>
 
 
