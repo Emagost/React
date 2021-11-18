@@ -16,7 +16,10 @@ export const LoginScreen = () => {
 
         dispatch(action)
 
-        history('/');
+        const lastPath = localStorage.getItem('lastPath') || '/';
+        const lastSearch = localStorage.getItem('lastSearch') || '';
+
+        history(lastPath + lastSearch);
 
     }
 
