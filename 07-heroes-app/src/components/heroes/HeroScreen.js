@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { useParams, useNavigate  } from 'react-router';
 import { Navigate } from '../../../node_modules/react-router-dom/index';
 import getHeroesById from '../../selectors/getHeroesById';
+import { heroesImg } from '../../helpers/heroImages';
 
 export const HeroScreen = () => {
 
@@ -29,7 +30,9 @@ export const HeroScreen = () => {
     return (
         <div className="row mt-5">
             <div className="col-4">
-                <img src={`/assets/heroes/${ heroeId }.jpg`}
+                <img 
+                // src={`/assets/heroes/${ heroeId }.jpg`} Desde public/assest
+                src={heroesImg(`./${heroeId}.jpg`).default}
                 alt={superhero} 
                 className="img-thumbnail animate__animated animate__fadeInLeft" />
             </div>
